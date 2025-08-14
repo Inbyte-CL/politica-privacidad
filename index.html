@@ -1,32 +1,240 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politica de Privacidad | Inbyte</title>
+
+  <!-- SEO / Open Graph -->
+  <meta name="description" content="Politica de privacidad de Inbyte, servicios de software e integraciones (incluye WhatsApp Cloud API).">
+  <meta property="og:title" content="Politica de Privacidad | Inbyte">
+  <meta property="og:description" content="Transparencia sobre datos, finalidades, conservacion, seguridad y derechos de los titulares.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"PrivacyPolicy",
+    "name":"Politica de Privacidad - Inbyte",
+    "inLanguage":"es",
+    "publisher":{"@type":"Organization","name":"Inbyte"},
+    "dateModified":"2025-08-13"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --panel:#111319;
+      --muted:#9aa3af;
+      --border:#1f2330;
+      --brand:#4f8cff;
+      --brand-2:#6ee7ff;
+      --text:#e5e7eb;
+      --ok:#22c55e;
+      --warn:#f59e0b;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(79,140,255,.2), transparent 60%),
+        radial-gradient(1000px 600px at 110% 10%, rgba(110,231,255,.12), transparent 60%),
+        var(--bg);
+    }
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    header{
+      position:sticky; top:0; backdrop-filter:saturate(120%) blur(10px);
+      background:linear-gradient(180deg, rgba(11,12,16,.85), rgba(11,12,16,.65));
+      border-bottom:1px solid var(--border);
+      z-index:10;
+    }
+    .brand{display:flex;align-items:center;gap:12px;padding:14px 0}
+    .logo{
+      width:32px;height:32px;border-radius:8px;
+      background: conic-gradient(from 210deg, var(--brand), var(--brand-2));
+      box-shadow:0 0 0 1px #264f99, 0 6px 24px rgba(79,140,255,.35);
+    }
+    nav a{
+      color:var(--muted); text-decoration:none; margin-right:16px; font-weight:600;
+    }
+    nav a:hover, nav a:focus{color:#fff}
+    h1{font-size:32px;margin:18px 0}
+    h2{font-size:22px;margin:28px 0 12px}
+    p,li{color:#d1d5db}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      border:1px solid var(--border); border-radius:16px; padding:22px; margin:16px 0;
+      box-shadow:0 6px 30px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.03);
+    }
+    .muted{color:var(--muted)}
+    .badge{display:inline-block;padding:2px 8px;border:1px solid var(--border);border-radius:999px;font-size:12px;color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    @media (min-width:820px){ .grid{grid-template-columns:1fr 1fr} }
+    .footer{
+      margin:40px 0 16px; padding-top:16px; border-top:1px dashed var(--border); color:var(--muted); font-size:14px
+    }
+    .toc{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 18px}
+    .toc a{color:var(--muted); text-decoration:none; border:1px solid var(--border); padding:6px 10px; border-radius:10px}
+    .toc a:hover{color:#fff; border-color:#2b3246}
+    code{background:#0f1320;border:1px solid #1f2330;padding:2px 6px;border-radius:6px;color:#cbd5ff}
+    a.btn{
+      display:inline-block;background:linear-gradient(90deg,var(--brand),var(--brand-2));
+      color:#06121f;text-decoration:none;font-weight:800;padding:10px 14px;border-radius:10px
+    }
+  </style>
 </head>
 <body>
-    <h1>Política de Privacidad</h1>
-    <p>Última actualización: 13 de agosto de 2025</p>
+  <header>
+    <div class="wrap brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div style="flex:1">
+        <div style="font-weight:800;letter-spacing:.3px">Inbyte</div>
+        <div class="muted" style="font-size:12px">Servicios de software e integraciones</div>
+      </div>
+      <nav aria-label="Secciones">
+        <a href="#datos">Datos</a>
+        <a href="#finalidades">Finalidades</a>
+        <a href="#derechos">Derechos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-    <p>Esta política de privacidad describe cómo recopilamos, usamos y protegemos la información de los usuarios que interactúan con nuestros servicios de mensajería a través de WhatsApp Business API.</p>
+  <main class="wrap">
+    <span class="badge">Ultima actualizacion: 13-08-2025</span>
+    <h1>Politica de Privacidad</h1>
+    <p class="muted">Transparencia sobre como tratamos tus datos en nuestros servicios, sitios e integraciones (incluida WhatsApp Cloud API). Esta version busca cumplir buenas practicas de privacidad para aprobacion en plataformas como Meta.</p>
 
-    <h2>1. Información que recopilamos</h2>
-    <ul>
-        <li>Números de teléfono de los usuarios que nos contactan o a quienes enviamos mensajes autorizados.</li>
-        <li>Contenido de los mensajes intercambiados.</li>
-    </ul>
+    <div class="toc">
+      <a href="#alcance">Alcance</a>
+      <a href="#datos">Datos que recopilamos</a>
+      <a href="#finalidades">Finalidades</a>
+      <a href="#bases">Bases legales</a>
+      <a href="#conservacion">Conservacion</a>
+      <a href="#compartir">Comparticion</a>
+      <a href="#transferencias">Transferencias internacionales</a>
+      <a href="#seguridad">Seguridad</a>
+      <a href="#menores">Menores</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#derechos">Derechos</a>
+      <a href="#cambios">Cambios</a>
+      <a href="#contacto">Contacto</a>
+    </div>
 
-    <h2>2. Uso de la información</h2>
-    <p>La información se utiliza exclusivamente para la comunicación y gestión de interacciones con los usuarios a través de WhatsApp, según lo permitido por Meta y las leyes aplicables.</p>
+    <section id="alcance" class="card">
+      <h2>1) Alcance</h2>
+      <p>Esta politica aplica a los datos tratados por <strong>Inbyte</strong> a traves de sus sitios, aplicaciones, APIs e integraciones, asi como canales de mensajeria autorizados (por ejemplo, WhatsApp), soporte y operaciones relacionadas.</p>
+    </section>
 
-    <h2>3. Compartir información</h2>
-    <p>No compartimos ni vendemos la información a terceros. Solo se comparte cuando es requerido por ley.</p>
+    <section id="datos" class="card">
+      <h2>2) Datos que recopilamos</h2>
+      <div class="grid">
+        <div>
+          <ul>
+            <li><strong>Datos de contacto:</strong> numero de telefono, nombre, email (si corresponde).</li>
+            <li><strong>Metadatos de mensajeria:</strong> identificadores de mensaje (wamid), marcas de tiempo, estados de entrega (sent, delivered, read, failed), numero de destinatario.</li>
+            <li><strong>Contenido de mensajes:</strong> solo cuando es necesario para brindar el servicio, soporte o segun contractualmente solicitado por el cliente.</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><strong>Datos tecnicos:</strong> direccion IP, registros de error, informacion de dispositivo/navegador cuando interactuas con nuestras apps o endpoints.</li>
+            <li><strong>Datos comerciales:</strong> historial de interacciones, preferencias, y datos necesarios para facturacion y soporte.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <h2>4. Seguridad</h2>
-    <p>Implementamos medidas de seguridad razonables para proteger la información contra acceso no autorizado.</p>
+    <section id="finalidades" class="card">
+      <h2>3) Finalidades del tratamiento</h2>
+      <ul>
+        <li>Proveer nuestros servicios de software e integraciones solicitadas.</li>
+        <li>Enviar comunicaciones transaccionales y notificaciones a traves de canales autorizados.</li>
+        <li>Atender consultas y soporte tecnico; diagnosticar y mejorar la calidad del servicio.</li>
+        <li>Cumplir obligaciones legales y de seguridad; prevencion de fraudes o abusos.</li>
+      </ul>
+    </section>
 
-    <h2>5. Contacto</h2>
-    <p>Si tienes preguntas sobre esta política, puedes contactarnos en: contacto@tudominio.com</p>
+    <section id="bases" class="card">
+      <h2>4) Bases legales</h2>
+      <ul>
+        <li><strong>Consentimiento</strong> del titular cuando corresponde.</li>
+        <li><strong>Ejecucion de contrato</strong> o medidas precontractuales con clientes.</li>
+        <li><strong>Interes legitimo</strong> en operar, asegurar y mejorar nuestros servicios.</li>
+        <li><strong>Cumplimiento legal</strong> cuando sea aplicable.</li>
+      </ul>
+    </section>
+
+    <section id="conservacion" class="card">
+      <h2>5) Conservacion</h2>
+      <p>Conservamos los datos solo el tiempo necesario para cumplir las finalidades o por los plazos exigidos por ley, auditorias y defensa de reclamos.</p>
+    </section>
+
+    <section id="compartir" class="card">
+      <h2>6) Comparticion y encargados</h2>
+      <p>No vendemos datos personales. Podemos compartir datos con:</p>
+      <ul>
+        <li><strong>Proveedores tecnologicos</strong> que actuan como encargados (por ejemplo, Meta para WhatsApp Cloud API, hosting, almacenamiento, monitoreo), bajo acuerdos de confidencialidad y seguridad.</li>
+        <li><strong>Autoridades</strong> cuando exista obligacion legal o requerimiento valido.</li>
+      </ul>
+    </section>
+
+    <section id="transferencias" class="card">
+      <h2>7) Transferencias internacionales</h2>
+      <p>Algunos proveedores pueden procesar datos fuera de tu pais. Aplicamos salvaguardas razonables para proteger la informacion conforme a estandares aceptados y normativa aplicable.</p>
+    </section>
+
+    <section id="seguridad" class="card">
+      <h2>8) Seguridad</h2>
+      <p>Aplicamos medidas tecnicas y organizativas razonables: control de accesos, cifrado en transito cuando corresponde, registro de eventos, principio de minimo privilegio y buenas practicas de desarrollo seguro.</p>
+    </section>
+
+    <section id="menores" class="card">
+      <h2>9) Menores de edad</h2>
+      <p>Nuestros servicios no estan dirigidos a menores de 13 anios. Si tomamos conocimiento de tratamiento inadvertido de datos de menores, adoptaremos acciones razonables para eliminarlos.</p>
+    </section>
+
+    <section id="cookies" class="card">
+      <h2>10) Cookies y tecnologias similares</h2>
+      <p>Podemos usar cookies o tecnologias similares de analitica y funcionamiento esencial. Puedes gestionar su uso desde la configuracion de tu navegador. Si implementamos un banner de cookies, lo indicaremos y te permitira ajustar preferencias.</p>
+    </section>
+
+    <section id="derechos" class="card">
+      <h2>11) Derechos del titular</h2>
+      <ul>
+        <li>Acceso, rectificacion y actualizacion de tus datos.</li>
+        <li>Supresion cuando proceda y oposicion o limitacion en ciertos casos.</li>
+        <li>Portabilidad cuando aplique y retiro del consentimiento sin efectos retroactivos.</li>
+      </ul>
+      <p>Para ejercerlos, ve a <a class="btn" href="#contacto">Contacto</a>.</p>
+    </section>
+
+    <section id="cambios" class="card">
+      <h2>12) Cambios en esta politica</h2>
+      <p>Podemos actualizar esta politica para reflejar cambios legales, tecnicos o de negocio. Publicaremos la version vigente indicando la fecha de ultima actualizacion.</p>
+    </section>
+
+    <section id="contacto" class="card">
+      <h2>13) Contacto</h2>
+      <p><strong>Inbyte</strong> — Servicios de software e integraciones<br>
+         Pais: Chile<br>
+         Email: <a href="mailto:contacto@inbyte.cl">contacto@inbyte.cl</a></p>
+      <p class="muted">Si tienes dudas sobre esta politica o deseas ejercer derechos, escribenos. Responderemos en un plazo razonable.</p>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Inbyte. Todos los derechos reservados.
+    </div>
+  </main>
+
+  <script>
+    // anno actual en footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
